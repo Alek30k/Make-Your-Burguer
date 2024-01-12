@@ -1,4 +1,4 @@
-import CartMain from "@/components/cart-main";
+import CartMain from "@/components/cart/cart-main";
 import HeroMain from "@/components/hero-main";
 
 const HomePage = () => {
