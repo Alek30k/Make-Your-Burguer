@@ -1,9 +1,11 @@
-import HeroMain from "@/components/ui/hero-main";
+import CartMain from "@/components/cart-main";
+import HeroMain from "@/components/hero-main";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="mt-10">
       <HeroMain />
+      <CartMain />
     </div>
   );
 };

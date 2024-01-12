@@ -1,7 +1,7 @@
 import { Phone } from "lucide-react";
-import { Button } from "./button";
-import IconLogo from "./icons/icon-logo";
-import Iconmenu from "./icons/icon.menu";
+import { Button } from "./ui/button";
+import IconLogo from "./ui/icons/icon-logo";
+import Iconmenu from "./ui/icons/icon.menu";
 
 import {
   Sheet,
@@ -15,7 +15,7 @@ import {
 const Navbar = () => {
   return (
     <>
-      <nav className="flex justify-between">
+      <nav className="flex justify-between mt-5">
         <Button
           variant="outline"
           size="icon"

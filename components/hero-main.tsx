@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import Image from "next/image";
 
 const HeroMain = () => {
   return (
-    <div>
+    <div className="mt-15">
       <h1 className="text-gray-800 text-5xl font-medium mt-5">
         Make Your Burger
       </h1>
