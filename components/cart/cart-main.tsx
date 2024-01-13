@@ -13,9 +13,9 @@ const CartMain = () => {
         className="mx-auto"
       />
       <section className="flex justify-between">
-        <CartHeader text="7 min" icon={Clock} />
-        <CartHeader text="7 min" icon={Beaker} />
-        <CartHeader text="7 min" icon={Clock} />
+        <CartHeader text="7 min" icon={Clock} iconColor="purple" />
+        <CartHeader text="7 min" icon={Beaker} iconColor="orange" />
+        <CartHeader text="7 min" icon={Clock} iconColor="red" />
       </section>
     </div>
   );
