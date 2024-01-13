@@ -1,4 +1,4 @@
-import { Clock } from "lucide-react";
+import { Clock, Beaker } from "lucide-react";
 import Image from "next/image";
 import CartHeader from "./cart-header";
 
@@ -12,10 +12,10 @@ const CartMain = () => {
         alt="Burguer"
         className="mx-auto"
       />
-      <section>
-        <CartHeader>
-          <Clock className="fill-white stroke-purple-500" />
-        </CartHeader>
+      <section className="flex justify-between">
+        <CartHeader text="7 min" icon={Clock} />
+        <CartHeader text="7 min" icon={Beaker} />
+        <CartHeader text="7 min" icon={Clock} />
       </section>
     </div>
   );
