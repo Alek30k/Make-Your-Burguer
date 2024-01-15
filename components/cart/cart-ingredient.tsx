@@ -14,9 +14,10 @@ import Image from "next/image";
 interface CartIngredientProps {
   src: string;
   alt: string;
+  title: string;
 }
 
-const CartIngredient = ({ src, alt }: CartIngredientProps) => {
+const CartIngredient = ({ src, alt, title }: CartIngredientProps) => {
   return (
     <Card className="rounded-[3rem]">
       <CardHeader>
@@ -24,7 +25,7 @@ const CartIngredient = ({ src, alt }: CartIngredientProps) => {
       </CardHeader>
       <CardContent>
         <h2 className="text-center text-gray-800 text-sm font-semibold leading-tight">
-          Cutlet
+          {title}
         </h2>
       </CardContent>
       <CardFooter className="flex justify-between">

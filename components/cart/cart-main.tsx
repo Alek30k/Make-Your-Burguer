@@ -28,9 +28,18 @@ const CartMain = () => {
           0.2 oz
         </Badge>
       </Button>
-
-      <CartIngredient src="/images/burger/sm/cutlet.png" alt="cutlet" />
-      <CartIngredient src="/images/burger/sm/mayo.png" alt="mayo" />
+      <div className="grid grid-cols-2 gap-x-8 mt-8">
+        <CartIngredient
+          src="/images/burger/sm/cutlet.png"
+          alt="cutlet"
+          title="Cutlet"
+        />
+        <CartIngredient
+          src="/images/burger/sm/mayo.png"
+          alt="mayo"
+          title="Mayo"
+        />
+      </div>
     </div>
   );
 };
