@@ -28,7 +28,7 @@ const CartMain = () => {
           0.2 oz
         </Badge>
       </Button>
-      <div className="grid grid-cols-2 gap-x-8 mt-8">
+      <section className="grid grid-cols-2 gap-x-8 mt-8">
         <CartIngredient
           src="/images/burger/sm/cutlet.png"
           alt="cutlet"
@@ -39,7 +39,12 @@ const CartMain = () => {
           alt="mayo"
           title="Mayo"
         />
-      </div>
+      </section>
+
+      <section>
+        <p>$12.95</p>
+        <Button>Checkout</Button>
+      </section>
     </div>
   );
 };
