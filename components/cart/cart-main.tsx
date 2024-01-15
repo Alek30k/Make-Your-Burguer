@@ -19,7 +19,7 @@ const CartMain = () => {
         <CartHeader text="60 oz" icon={Beaker} iconColor="orange" />
         <CartHeader text="249 kcal" icon={Clock} iconColor="red" />
       </section>
-      <Button className="w-full text-red-500 text-base font-normal  items-center gap-2.5 ">
+      <Button className="w-full bg-rose-50 text-red-500 text-base font-normal  items-center gap-2.5 rounded-2xl mt-8">
         <span>+ Tomato Ketchup</span>
         <Badge className="py-1.5 bg-red-500">0.2 oz</Badge>
       </Button>
