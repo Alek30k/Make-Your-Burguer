@@ -30,6 +30,7 @@ const CartMain = () => {
       </Button>
 
       <CartIngredient src="/images/burger/sm/cutlet.png" alt="cutlet" />
+      <CartIngredient src="/images/burger/sm/mayo.png" alt="mayo" />
     </div>
   );
 };
