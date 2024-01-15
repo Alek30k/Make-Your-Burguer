@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 interface Props {
   text?: string;
   icon: React.ElementType;
-  iconColor: string;
+  iconColor?: "purple" | "orange" | "red" | "green" | "blue" | "yellow";
 }
 
 const CartHeader = ({ text, icon: Icon, iconColor = "purple" }: Props) => {
