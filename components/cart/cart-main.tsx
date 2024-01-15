@@ -1,8 +1,16 @@
-import { Clock, Beaker } from "lucide-react";
+import { Clock, Beaker, Plus, Minus } from "lucide-react";
 import Image from "next/image";
 import CartHeader from "./cart-header";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const CartMain = () => {
   return (
@@ -27,6 +35,32 @@ const CartMain = () => {
           0.2 oz
         </Badge>
       </Button>
+
+      <Card className="rounded-[3rem]">
+        <CardHeader>
+          <Image
+            src={"/images/burger/sm/cutlet.png"}
+            alt="cutlet"
+            width={104}
+            height={37}
+            className="m-auto"
+          />
+        </CardHeader>
+        <CardContent>
+          <h2 className="text-center text-gray-800 text-sm font-semibold leading-tight">
+            Cutlet
+          </h2>
+        </CardContent>
+        <CardFooter className="flex justify-between">
+          <Button className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700">
+            <Plus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
+          </Button>
+          <span>0</span>
+          <Button className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700">
+            <Minus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
+          </Button>
+        </CardFooter>
+      </Card>
     </div>
   );
 };
