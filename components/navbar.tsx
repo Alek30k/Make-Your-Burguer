@@ -11,6 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -23,7 +24,16 @@ const Navbar = () => {
         >
           <IconLogo />
         </Button>
-        <Button className="rounded-full bg-rose-50 text-red-500 hover:bg-rose-500 hover:text-red-50">
+
+        <Link
+          href="/about"
+          className="text-gray-800 text-base font-semibold font-['Open Sans'] leading-tight"
+        >
+          Discover
+          <div className="w-[67px] h-0.5 relative bg-indigo-700 rounded-[99px]"></div>
+        </Link>
+
+        <Button className="rounded-full bg-rose-50 text-red-500 hover:bg-rose-500 hover:text-rose-50">
           <Phone className="mr-2 h-4 w-4" />
           Call Me Back
         </Button>

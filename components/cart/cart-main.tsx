@@ -45,7 +45,7 @@ const CartMain = () => {
         <p className="text-indigo-700 text-4xl font-extrabold text-center ">
           $12.95
         </p>
-        <Button className=" bg-indigo-700 rounded-full w-full mt-8 text-xl py-8">
+        <Button className="bg-indigo-700 rounded-full w-full mt-8 text-xl py-8 hover:bg-indigo-800">
           Checkout
         </Button>
       </section>
