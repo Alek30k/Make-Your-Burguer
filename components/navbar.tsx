@@ -17,20 +17,29 @@ const Navbar = () => {
   return (
     <>
       <nav className="flex justify-between mt-5">
-        <Button
-          variant="outline"
-          size="icon"
-          className="rounded-full bg-gray-100"
-        >
-          <IconLogo />
-        </Button>
+        <Link href="/">
+          <Button
+            variant="outline"
+            size="icon"
+            className="rounded-full bg-gray-100"
+          >
+            <IconLogo />
+          </Button>
+        </Link>
 
         <Link
           href="/about"
-          className="text-gray-800 text-base font-semibold font-['Open Sans'] leading-tight"
+          className="hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight"
         >
           Discover
-          <div className="w-[67px] h-0.5 relative bg-indigo-700 rounded-[99px]"></div>
+          <div className=" w-[67px] h-0.5 relative bg-indigo-700 rounded-[99px]"></div>
+        </Link>
+        <Link
+          href="/make-your-burger"
+          className="hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight"
+        >
+          Make Your Burger
+          {/* <div className=" w-[67px] h-0.5 relative bg-indigo-700 rounded-[99px]"></div> */}
         </Link>
 
         <Button className="rounded-full bg-rose-50 text-red-500 hover:bg-rose-500 hover:text-rose-50">
