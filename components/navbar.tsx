@@ -57,6 +57,12 @@ const Navbar = () => {
           <Phone className="mr-2 h-4 w-4 " />
           Call Me Back
         </Button>
+        <Link href="tel:+88004378722" className="hidden sm:block font-medium">
+          8 800 437-87-22
+        </Link>
+        <Button className="rounded-full hidden sm:block" variant={"secondary"}>
+          😅
+        </Button>
         <Sheet>
           <SheetTrigger asChild>
             <Button
