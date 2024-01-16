@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -34,14 +35,20 @@ const Navbar = () => {
 
         <Link
           href="/discover"
-          className="hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight"
+          className={cn(
+            "hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight",
+            pathname === "/discover" &&
+              "border-b-4 border-indigo-500 font-medium"
+          )}
         >
           Discover
-          <div className=" w-[67px] h-0.5 relative bg-indigo-700 rounded-[99px]"></div>
         </Link>
         <Link
           href="/make"
-          className="hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight"
+          className={cn(
+            "hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight",
+            pathname === "/make" && "border-b-4 border-indigo-500 font-medium"
+          )}
         >
           Make Your Burger
           {/* <div className=" w-[67px] h-0.5 relative bg-indigo-700 rounded-[99px]"></div> */}
