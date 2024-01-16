@@ -33,14 +33,14 @@ const Navbar = () => {
         </Link>
 
         <Link
-          href="/make/discover"
+          href="/discover"
           className="hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight"
         >
           Discover
           <div className=" w-[67px] h-0.5 relative bg-indigo-700 rounded-[99px]"></div>
         </Link>
         <Link
-          href="/make-your-burger"
+          href="/make"
           className="hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight"
         >
           Make Your Burger
