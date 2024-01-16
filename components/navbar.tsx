@@ -1,3 +1,5 @@
+"use client";
+
 import { Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import IconLogo from "./ui/icons/icon-logo";
@@ -12,8 +14,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <>
       <nav className="flex justify-between mt-5">
@@ -28,7 +33,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          href="/about"
+          href="/make/discover"
           className="hidden text-gray-800 sm:block text-base font-semibold font-['Open Sans'] leading-tight"
         >
           Discover
