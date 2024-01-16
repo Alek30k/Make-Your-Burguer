@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between mt-5">
+      <nav className="flex justify-between items-center sm:gap-x-10 sm:justify-start mt-8 ">
         <Link href="/">
           <Button
             variant="outline"
@@ -53,7 +53,7 @@ const Navbar = () => {
           {/* <div className=" w-[67px] h-0.5 relative bg-indigo-700 rounded-[99px]"></div> */}
         </Link>
 
-        <Button className="rounded-full bg-rose-50 text-red-500 hover:bg-rose-500 hover:text-rose-50">
+        <Button className="rounded-full bg-rose-50 text-red-500 hover:bg-rose-500 hover:text-rose-50 sm:ml-auto">
           <Phone className="mr-2 h-4 w-4 " />
           Call Me Back
         </Button>
