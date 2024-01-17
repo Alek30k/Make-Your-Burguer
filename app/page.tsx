@@ -3,7 +3,7 @@ import HeroMain from "@/components/hero-main";
 
 const HomePage = () => {
   return (
-    <div className="mt-10 mb-56">
+    <div className="mt-10">
       <HeroMain />
       <div className="sm:hidden">
         <CartMain />
