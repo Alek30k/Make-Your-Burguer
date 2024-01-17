@@ -3,11 +3,11 @@ import Image from "next/image";
 
 const HeroMain = () => {
   return (
-    <div className="mt-15">
+    <div className="mt-15 sm:flex sm:w-1/3 sm:w-2/3">
       <h1 className="text-gray-800 text-5xl font-medium mt-5">
         Make Your Burger
       </h1>
-      <p className="text-gray-800  text-xl font-normal leading-loose">
+      <p className="sm:hidden text-gray-800  text-xl font-normal leading-loose">
         Parallax screen. Burger ingredients and emojis moving depending on the
         position of the mouse pointer.
       </p>

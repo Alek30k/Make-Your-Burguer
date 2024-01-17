@@ -5,7 +5,9 @@ const HomePage = () => {
   return (
     <div className="mt-10 mb-56">
       <HeroMain />
-      <CartMain />
+      <div className="sm:hidden">
+        <CartMain />
+      </div>
     </div>
   );
 };
