@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center sm:gap-x-10 sm:justify-start mt-8 ">
+      <nav className="flex justify-between items-center sm:gap-x-10 sm:justify-start py-8 ">
         <Link href="/">
           <Button
             variant="outline"
