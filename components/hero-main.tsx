@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
 
 const HeroMain = () => {
   return (
-    <div className="mt-20 sm:mt-0  sm:items-center sm:max-h-[735px] justify-start gap-[120px] sm:inline-flex">
+    <div className=" relative mt-20 sm:mt-0  sm:items-center sm:max-h-[735px] justify-start gap-[120px] sm:inline-flex">
       <h1 className="text-gray-800 text-5xl sm:text-7xl font-bold mt-5 sm:leading-[80px]  sm:w-1/3">
         Make Your Burger
       </h1>
@@ -11,10 +12,14 @@ const HeroMain = () => {
         Parallax screen. Burger ingredients and emojis moving depending on the
         position of the mouse pointer.
       </p>
-      <div className="relative flex justify-center items-center  sm:w-2/3">
-        <Button className="w-32 h-32 rounded-full uppercase text-xl absolute ">
-          make burger
-        </Button>
+      <div className=" flex justify-center items-center  sm:w-2/3 ">
+        <Link href="/make" className="">
+          <Button className="w-[180px] h-[180px] bg-indigo-700 rounded-[90px] flex-col justify-center items-center inline-flex">
+            <span className="text-center text-white text-2xl font-extrabold font-['Open Sans'] uppercase leading-[30px]">
+              make burger
+            </span>
+          </Button>
+        </Link>
         {/* <Image
           src="/images/burger.png"
           width={448}
