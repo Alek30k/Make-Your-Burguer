@@ -5,7 +5,7 @@ import { Beaker, Clock } from "lucide-react";
 
 const MakeCart = () => {
   return (
-    <div>
+    <div className="p-8">
       <h2 className="text-gray-800 text-4xl font-semibold mb-4">summary</h2>
       <Separator className="mb-4" />
       <div className="grid grid-cols-2 mb-4">
