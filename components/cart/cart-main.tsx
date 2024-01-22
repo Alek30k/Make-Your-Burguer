@@ -1,9 +1,8 @@
-import { Clock, Beaker } from "lucide-react";
 import Image from "next/image";
-import CartHeader from "./cart-header";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import CartIngredient from "./cart-ingredient";
+import CartDetails from "./cartDetails";
 
 const CartMain = () => {
   return (
@@ -15,11 +14,7 @@ const CartMain = () => {
         alt="Burguer"
         className="mx-auto"
       />
-      <section className="flex justify-between mt-8">
-        <CartHeader text="7 min" icon={Clock} iconColor="purple" />
-        <CartHeader text="60 oz" icon={Beaker} iconColor="orange" />
-        <CartHeader text="249 kcal" icon={Clock} iconColor="red" />
-      </section>
+      <CartDetails />
       <Button className="group bg-rose-50  text-base font-normal w-full  items-center gap-2.5 rounded-2xl mt-8 hover:bg-rose-500 ">
         <span className="text-red-500 group-hover:text-red-50">
           + Tomato Ketchup
