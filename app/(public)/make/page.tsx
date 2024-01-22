@@ -8,21 +8,29 @@ const ingredients = [
     id: "1",
     name: "Cheese",
     image: "/images/make/cheese.png",
+    alt: "Ingredient Cheese",
+    quantity: 0,
   },
   {
     id: "2",
     name: "Meat",
     image: "/images/make/meat.png",
+    alt: "Ingredient Meat",
+    quantity: 0,
   },
   {
     id: "3",
     name: "Salad",
     image: "/images/make/salad.png",
+    alt: "Ingredient Salad",
+    quantity: 0,
   },
   {
     id: "4",
     name: "Tomato",
     image: "/images/make/tomato.png",
+    alt: "Ingredient Tomato",
+    quantity: 0,
   },
 ];
 
