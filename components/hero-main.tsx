@@ -12,9 +12,9 @@ const HeroMain = () => {
         Parallax screen. Burger ingredients and emojis moving depending on the
         position of the mouse pointer.
       </p>
-      <div className=" flex justify-center items-center  sm:w-2/3 ">
-        <Link href="/make" className="">
-          <Button className="w-[180px] h-[180px] bg-indigo-700 rounded-[90px] flex-col justify-center items-center inline-flex">
+      <div className="relative flex justify-center items-center sm:grow  sm:w-2/3">
+        <Link href="/make" className="absolute sm:top-[400px] sm:left-0">
+          <Button className="sm:w-[160px] sm:h-[160px] w-[120px] h-[120px] bg-indigo-700 rounded-[90px] flex-col justify-center items-center inline-flex">
             <span className="text-center text-white text-2xl font-extrabold font-['Open Sans'] uppercase leading-[30px]">
               make burger
             </span>
