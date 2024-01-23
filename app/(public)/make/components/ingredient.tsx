@@ -15,10 +15,11 @@ import { Ingredient } from "../interface/ingredient.type";
 
 interface CartIngredientProps {
   ingredient: Ingredient;
+  addIngredient: (id: string) => void;
 }
 
-const MakeIngredient = ({ ingredient }: CartIngredientProps) => {
-  const { alt, image, name, quantity, price, rotate } = ingredient;
+const MakeIngredient = ({ ingredient, addIngredient }: CartIngredientProps) => {
+  const { alt, image, name, id, quantity, price, rotate } = ingredient;
 
   return (
     <Card className="rounded-[3rem]">
@@ -37,10 +38,13 @@ const MakeIngredient = ({ ingredient }: CartIngredientProps) => {
         </h2>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700">
+        <Button
+          onClick={() => addIngredient(id)}
+          className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700"
+        >
           <Plus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
         </Button>
-        <span className="text-xl font-bold ">0</span>
+        <span className="text-xl font-bold ">{quantity}</span>
         <Button className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700">
           <Minus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
         </Button>
