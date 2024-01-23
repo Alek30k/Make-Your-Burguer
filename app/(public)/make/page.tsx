@@ -28,7 +28,7 @@ const MakePage = () => {
   const removeIngredient = (id: string) => {
     setIngredients((prev) =>
       prev.map((item) => {
-        if (item.id === id) {
+        if (item.id === id && item.quantity > 0) {
           return {
             ...item,
             quantity: item.quantity - 1,
@@ -44,7 +44,7 @@ const MakePage = () => {
       <div className="grid grid-cols-3 items-center">
         <MakeTitle />
         <MakeBurger />
-        <MakeCart />
+        <MakeCart ingredients={ingredients} />
       </div>
       <MakeIngredients
         ingredients={ingredients}
