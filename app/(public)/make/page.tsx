@@ -71,7 +71,7 @@ const MakePage = () => {
         <MakeBurger />
         <MakeCart />
       </div>
-      <MakeIngredients />
+      <MakeIngredients ingredients={ingredients} />
     </>
   );
 };

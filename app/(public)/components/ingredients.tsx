@@ -1,11 +1,16 @@
+import { Ingredient } from "@/components/interface/ingredient.type";
 import MakeIngredient from "./ingredient";
 
-const MakeIngredients = () => {
+interface MakeIngredientProps {
+  ingredients: Ingredient[];
+}
+
+const MakeIngredients = ({ ingredients }: MakeIngredientProps) => {
   return (
     <div className="grid grid-cols-8 gap-4">
-      {Array.from({ length: 8 }).map((_, index) => (
+      {ingredients.map((item) => (
         <MakeIngredient
-          key={index}
+          key={item.id}
           src="/images/make/cheese.png"
           alt="Ingredient Cheese"
           title="Cheese"
