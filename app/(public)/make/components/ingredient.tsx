@@ -14,24 +14,26 @@ import Image from "next/image";
 import { Ingredient } from "../interface/ingredient.type";
 
 interface CartIngredientProps {
-  ingredient: Ingredient[];
+  ingredient: Ingredient;
 }
 
 const MakeIngredient = ({ ingredient }: CartIngredientProps) => {
+  const { alt, image, name, quantity, price, rotate } = ingredient;
+
   return (
     <Card className="rounded-[3rem]">
       <CardHeader>
         <Image
-          src={src}
+          src={image}
           alt={alt}
           width={104}
           height={37}
-          className={cn("m-auto ")}
+          className={cn("m-auto ", rotate && "-rotate-12")}
         />
       </CardHeader>
       <CardContent>
         <h2 className="text-center text-gray-800 text-sm font-semibold leading-tight">
-          {title}
+          {name}
         </h2>
       </CardContent>
       <CardFooter className="flex justify-between">
