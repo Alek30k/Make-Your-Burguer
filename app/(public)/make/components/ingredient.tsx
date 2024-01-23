@@ -7,17 +7,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 import { Plus, Minus } from "lucide-react";
 import Image from "next/image";
+import { Ingredient } from "../interface/ingredient.type";
 
 interface CartIngredientProps {
-  src: string;
-  alt: string;
-  title: string;
+  ingredient: Ingredient[];
 }
 
-const MakeIngredient = ({ src, alt, title }: CartIngredientProps) => {
+const MakeIngredient = ({ ingredient }: CartIngredientProps) => {
   return (
     <Card className="rounded-[3rem]">
       <CardHeader>
@@ -26,7 +26,7 @@ const MakeIngredient = ({ src, alt, title }: CartIngredientProps) => {
           alt={alt}
           width={104}
           height={37}
-          className="m-auto h-[30px]"
+          className={cn("m-auto ")}
         />
       </CardHeader>
       <CardContent>
