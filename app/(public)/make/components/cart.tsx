@@ -22,7 +22,10 @@ const MakeCart = ({ ingredients }: MakeCartProps) => {
         <p className="w-[197px] text-indigo-700 text-4xl font-extrabold ">
           $ {total.toFixed(2)}
         </p>
-        <Button className="text-violet-50 w-[197px] bg-indigo-700 rounded-[99px]  p-6 text-3xl font-semibold leading-tight">
+        <Button
+          className="text-violet-50 w-[197px] bg-indigo-700 rounded-[99px]  p-6 text-3xl font-semibold leading-tight"
+          disabled={total === 0}
+        >
           Checkout
         </Button>
       </div>

@@ -2,13 +2,15 @@ import Image from "next/image";
 
 const MakeBurger = () => {
   return (
-    <div>
-      <Image
-        src="/images/make/bg.png"
-        alt="background burger"
-        width={598}
-        height={595}
-      />
+    <div className="bg-[url('/images/make/bg.png')] h-full w-full bg-cover bg-no-repeat bg-center">
+      <div>
+        <Image
+          src="/images/make/bun.png"
+          alt="background bun"
+          width={1000}
+          height={300}
+        />
+      </div>
     </div>
   );
 };
