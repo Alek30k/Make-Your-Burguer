@@ -16,9 +16,14 @@ import { Ingredient } from "../interface/ingredient.type";
 interface CartIngredientProps {
   ingredient: Ingredient;
   addIngredient: (id: string) => void;
+  removeIngredient: (id: string) => void;
 }
 
-const MakeIngredient = ({ ingredient, addIngredient }: CartIngredientProps) => {
+const MakeIngredient = ({
+  ingredient,
+  addIngredient,
+  removeIngredient,
+}: CartIngredientProps) => {
   const { alt, image, name, id, quantity, price, rotate } = ingredient;
 
   return (
@@ -45,7 +50,10 @@ const MakeIngredient = ({ ingredient, addIngredient }: CartIngredientProps) => {
           <Plus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
         </Button>
         <span className="text-xl font-bold ">{quantity}</span>
-        <Button className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700">
+        <Button
+          onClick={() => removeIngredient(id)}
+          className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700"
+        >
           <Minus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
         </Button>
       </CardFooter>

@@ -4,11 +4,13 @@ import MakeIngredient from "./ingredient";
 interface MakeIngredientProps {
   ingredients: Ingredient[];
   addIngredient: (id: string) => void;
+  removeIngredient: (id: string) => void;
 }
 
 const MakeIngredients = ({
   ingredients,
   addIngredient,
+  removeIngredient,
 }: MakeIngredientProps) => {
   return (
     <div className="grid grid-cols-8 gap-4">
@@ -17,6 +19,7 @@ const MakeIngredients = ({
           key={item.id}
           ingredient={item}
           addIngredient={addIngredient}
+          removeIngredient={removeIngredient}
         />
       ))}
     </div>

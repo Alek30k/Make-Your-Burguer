@@ -25,6 +25,20 @@ const MakePage = () => {
     );
   };
 
+  const removeIngredient = (id: string) => {
+    setIngredients((prev) =>
+      prev.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            quantity: item.quantity - 1,
+          };
+        }
+        return item;
+      })
+    );
+  };
+
   return (
     <>
       <div className="grid grid-cols-3 items-center">
@@ -35,6 +49,7 @@ const MakePage = () => {
       <MakeIngredients
         ingredients={ingredients}
         addIngredient={addIngredient}
+        removeIngredient={removeIngredient}
       />
     </>
   );
