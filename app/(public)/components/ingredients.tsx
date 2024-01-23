@@ -11,9 +11,9 @@ const MakeIngredients = ({ ingredients }: MakeIngredientProps) => {
       {ingredients.map((item) => (
         <MakeIngredient
           key={item.id}
-          src="/images/make/cheese.png"
-          alt="Ingredient Cheese"
-          title="Cheese"
+          src={item.image}
+          alt={item.alt}
+          title={item.name}
         />
       ))}
     </div>

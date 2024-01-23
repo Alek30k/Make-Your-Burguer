@@ -21,7 +21,13 @@ const MakeIngredient = ({ src, alt, title }: CartIngredientProps) => {
   return (
     <Card className="rounded-[3rem]">
       <CardHeader>
-        <Image src={src} alt={alt} width={104} height={37} className="m-auto" />
+        <Image
+          src={src}
+          alt={alt}
+          width={104}
+          height={37}
+          className="m-auto h-[30px]"
+        />
       </CardHeader>
       <CardContent>
         <h2 className="text-center text-gray-800 text-sm font-semibold leading-tight">
