@@ -20,7 +20,7 @@ const MakeCart = ({ ingredients }: MakeCartProps) => {
       <Separator className="mb-4" />
       <div className="grid grid-cols-2 mb-4">
         <p className="w-[197px] text-indigo-700 text-4xl font-extrabold ">
-          $ {total}
+          $ {total.toFixed(2)}
         </p>
         <Button className="text-violet-50 w-[197px] bg-indigo-700 rounded-[99px]  p-6 text-3xl font-semibold leading-tight">
           Checkout
