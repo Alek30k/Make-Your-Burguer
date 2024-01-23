@@ -2,15 +2,25 @@ import CartHeader from "@/components/cart/cart-header";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Beaker, Clock } from "lucide-react";
+import { Ingredient } from "../interface/ingredient.type";
+import { ingredients } from "../db/ingredientsDB";
 
-const MakeCart = () => {
+interface MakeCartProps {
+  ingredients: Ingredient[];
+}
+
+const MakeCart = ({ ingredients }: MakeCartProps) => {
+  const total = ingredients.reduce((acc, item) => {
+    return acc + item.price * item.quantity;
+  }, 0);
+
   return (
     <div className="p-8">
       <h2 className="text-gray-800 text-4xl font-semibold mb-4">summary</h2>
       <Separator className="mb-4" />
       <div className="grid grid-cols-2 mb-4">
         <p className="w-[197px] text-indigo-700 text-4xl font-extrabold ">
-          $12.31
+          $ {total}
         </p>
         <Button className="text-violet-50 w-[197px] bg-indigo-700 rounded-[99px]  p-6 text-3xl font-semibold leading-tight">
           Checkout
