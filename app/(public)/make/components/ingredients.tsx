@@ -1,4 +1,4 @@
-import { Ingredient } from "@/components/interface/ingredient.type";
+import { Ingredient } from "../interface/ingredient.type";
 import MakeIngredient from "./ingredient";
 
 interface MakeIngredientProps {

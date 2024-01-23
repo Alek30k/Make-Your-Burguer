@@ -4,4 +4,6 @@ export interface Ingredient {
   image: string;
   alt: string;
   quantity: number;
+  price?: number;
+  rotate?: boolean;
 }
