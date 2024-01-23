@@ -34,7 +34,7 @@ const MakeIngredient = ({
           alt={alt}
           width={104}
           height={37}
-          className={cn("m-auto ", rotate && "-rotate-12")}
+          className={cn("m-auto h-[30px]", rotate && "-rotate-12")}
         />
       </CardHeader>
       <CardContent>
@@ -44,17 +44,17 @@ const MakeIngredient = ({
       </CardContent>
       <CardFooter className="flex justify-between">
         <Button
-          onClick={() => addIngredient(id)}
-          className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700"
-        >
-          <Plus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
-        </Button>
-        <span className="text-xl font-bold ">{quantity}</span>
-        <Button
           onClick={() => removeIngredient(id)}
           className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700"
         >
           <Minus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
+        </Button>
+        <span className="text-xl font-bold ">{quantity}</span>
+        <Button
+          onClick={() => addIngredient(id)}
+          className="rounded-full p-2 bg-violet-50 group hover:bg-indigo-700"
+        >
+          <Plus className="stroke-indigo-700 group-hover:stroke-violet-50 " />
         </Button>
       </CardFooter>
     </Card>
