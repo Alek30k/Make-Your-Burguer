@@ -9,7 +9,7 @@ const MakeBurger = ({ ingredients }: Props) => {
   return (
     <div className="relative bg-[url('/images/make/bg.png')] h-[595px] w-full bg-contain bg-no-repeat bg-center">
       {ingredients.map(
-        ({ image, alt, id, name, price, quantity, rotate }) =>
+        ({ image, alt, id, name, price, quantity, rotate }, index) =>
           quantity > 0 && (
             <Image
               key={id}
@@ -17,7 +17,10 @@ const MakeBurger = ({ ingredients }: Props) => {
               alt={alt}
               width={1000}
               height={300}
-              className="absolute bottom-10 z-10"
+              className="absolute z-10"
+              style={{
+                bottom: `${(index + 1) * 50}px`,
+              }}
             />
           )
       )}
