@@ -10,6 +10,7 @@ import { Ingredient } from "./interface/ingredient.type";
 
 const MakePage = () => {
   const [ingredients, setIngredients] = useState<Ingredient[]>(initialState);
+  const [burger, setBurger] = useState<Ingredient[]>([]);
 
   const addIngredient = (id: string) => {
     setIngredients((prev) =>
@@ -23,6 +24,16 @@ const MakePage = () => {
         return item;
       })
     );
+  };
+
+  const addBurger = (id: string) => {
+    setBurger((prev) => {
+      const item = ingredients.find((ingredient) => ingredient.id === id);
+      if (item) {
+        return [...prev, item];
+      }
+      return prev;
+    });
   };
 
   const removeIngredient = (id: string) => {
