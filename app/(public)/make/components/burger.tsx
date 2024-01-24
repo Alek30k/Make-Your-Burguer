@@ -21,6 +21,13 @@ const MakeBurger = ({ ingredients }: Props) => {
             />
           )
       )}
+      <Image
+        src="/images/make/bun.png"
+        alt="burger bun"
+        width={1000}
+        height={300}
+        className="absolute bottom-0"
+      />
     </div>
   );
 };
