@@ -24,6 +24,7 @@ const MakePage = () => {
         return item;
       })
     );
+    addBurger(id);
   };
 
   const addBurger = (id: string) => {
@@ -54,6 +55,7 @@ const MakePage = () => {
         return item;
       })
     );
+    removeBurger(id);
   };
 
   return (
