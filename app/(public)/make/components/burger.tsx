@@ -17,7 +17,7 @@ const MakeBurger = ({ ingredients }: Props) => {
               alt={alt}
               width={1000}
               height={300}
-              className="absolute bottom-0"
+              className="absolute bottom-10 z-10"
             />
           )
       )}
