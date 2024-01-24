@@ -7,7 +7,7 @@ export const ingredients: Ingredient[] = [
     image: "/images/make/cutlet.png",
     alt: "Ingredient Cutlet",
     quantity: 0,
-    price: 1,
+    price: 7,
     rotate: false,
   },
   {

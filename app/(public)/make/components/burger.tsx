@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Ingredient } from "../interface/ingredient.type";
 
@@ -6,23 +8,42 @@ interface Props {
 }
 
 const MakeBurger = ({ burger }: Props) => {
-  const count = 0;
+  const counter = 0;
 
   return (
     <div className="relative bg-[url('/images/make/bg.png')] h-[595px] w-full bg-contain bg-no-repeat bg-center">
       {burger.map(
         ({ image, alt, id, name, price, quantity, rotate }, index) => (
-          <Image
-            key={id}
-            src={image}
-            alt={alt}
-            width={1000}
-            height={300}
-            className="absolute z-10"
-            style={{
-              bottom: `${(index + 1) * 40}px`,
-            }}
-          />
+          <>
+            <Image
+              key={id}
+              src={image}
+              alt={alt}
+              width={1000}
+              height={300}
+              className="absolute z-10"
+              style={{
+                bottom: `${(index + 1) * 40}px`,
+              }}
+            />
+            {/* {quantity > 0 &&
+              Array.from({ length: quantity }, (_, idx) => {
+                counter++;
+                return (
+                  <Image
+                    key={idx}
+                    src={image}
+                    alt={alt}
+                    width={1000}
+                    height={300}
+                    className="absolute z-20"
+                    style={{
+                      bottom: `${counter * 40}px`,
+                    }}
+                  />
+                );
+              })} */}
+          </>
         )
       )}
       <Image
