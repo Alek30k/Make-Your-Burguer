@@ -36,6 +36,12 @@ const MakePage = () => {
     });
   };
 
+  const removeBurger = (id: string) => {
+    setBurger((prev) => {
+      return prev.filter((item, index) => item.id !== id);
+    });
+  };
+
   const removeIngredient = (id: string) => {
     setIngredients((prev) =>
       prev.map((item) => {
