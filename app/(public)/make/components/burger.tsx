@@ -42,7 +42,8 @@ const MakeBurger = ({ burger }: Props) => {
                     height={300}
                     className={cn(
                       "absolute z-20 ",
-                      rotate && "-rotate-[12deg]  bottom-1 w-64"
+                      rotate && "-rotate-[12deg]  bottom-1 w-48 ",
+                      quantity === 2 && " "
                     )}
                     style={{
                       bottom: `${counter * 40}px`,
