@@ -34,21 +34,29 @@ const MakeBurger = ({ burger }: Props) => {
               Array.from({ length: quantity }, (_, idx) => {
                 counter++;
                 return (
-                  <Image
-                    key={idx}
-                    src={image}
-                    alt={alt}
-                    width={1000}
-                    height={300}
+                  <div
                     className={cn(
-                      "absolute z-20 ",
-                      rotate && "-rotate-[12deg]  bottom-1 w-48 ",
-                      quantity === 2 && " "
+                      "",
+                      rotate &&
+                        "w-[219.60px] h-[108.56px] justify-end items-center inline-flex bg-slate-400"
                     )}
-                    style={{
-                      bottom: `${counter * 40}px`,
-                    }}
-                  />
+                  >
+                    <Image
+                      key={idx}
+                      src={image}
+                      alt={alt}
+                      width={1000}
+                      height={300}
+                      className={cn(
+                        "absolute z-20 justify-end items-center inline-flex ",
+                        rotate &&
+                          "origin-top-left- rotate-[-10.83deg] w-[214.78px] h-[94.13px]  bottom-12"
+                      )}
+                      style={{
+                        bottom: `${counter * 40}px`,
+                      }}
+                    />
+                  </div>
                 );
               })}
           </>

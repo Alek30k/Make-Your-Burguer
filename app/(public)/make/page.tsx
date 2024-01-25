@@ -60,7 +60,7 @@ const MakePage = () => {
 
   return (
     <>
-      <div className="grid grid-cols-3 items-center">
+      <div className="grid grid-cols-3 items-center mb-8">
         <MakeTitle />
         <MakeBurger burger={ingredients} />
         <MakeCart ingredients={ingredients} />
