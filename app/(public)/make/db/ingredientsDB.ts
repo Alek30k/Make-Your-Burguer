@@ -26,7 +26,7 @@ export const ingredients: Ingredient[] = [
     alt: "Ingredient Onion",
     quantity: 0,
     price: 0.1,
-    rotate: false,
+    rotate: true,
   },
   {
     id: "4",

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Ingredient } from "../interface/ingredient.type";
+import { cn } from "@/lib/utils";
 
 interface Props {
   burger: Ingredient[];
@@ -15,19 +16,19 @@ const MakeBurger = ({ burger }: Props) => {
       {burger.map(
         ({ image, alt, id, name, price, quantity, rotate }, index) => (
           <>
-            {index === burger.length - 1 && counter > 0 && (
+            {/* {index === burger.length - 1 && counter > 0 && (
               <Image
                 key={index}
                 src="/images/make/bun_top.png"
                 alt="burger bun top"
                 width={1000}
                 height={300}
-                className="absolute z-20"
+                className="absolute z-20 	"
                 style={{
                   bottom: `${(counter + 1) * 40}px`,
                 }}
               />
-            )}
+            )} */}
 
             {quantity > 0 &&
               Array.from({ length: quantity }, (_, idx) => {
@@ -39,7 +40,10 @@ const MakeBurger = ({ burger }: Props) => {
                     alt={alt}
                     width={1000}
                     height={300}
-                    className="absolute z-20"
+                    className={cn(
+                      "absolute z-20 ",
+                      rotate && "-rotate-[12deg]  bottom-1 w-64"
+                    )}
                     style={{
                       bottom: `${counter * 40}px`,
                     }}
